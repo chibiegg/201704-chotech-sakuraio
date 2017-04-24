@@ -1,0 +1,7 @@
+CREATE TABLE  `channels` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`module` VARCHAR( 20 ) NOT NULL ,
+`datetime` DATETIME NOT NULL ,
+`channel` INT NOT NULL ,
+`value` FLOAT NOT NULL
+);
