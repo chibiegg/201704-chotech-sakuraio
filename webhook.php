@@ -5,6 +5,12 @@ include('./config.php');
 $json_string = file_get_contents('php://input');
 $message = json_decode($json_string, TRUE);
 
+$x_sakura_signature = hash_hmac("sha1", $json_string, SECRET);
+
+if($_SERVER["HTTP_X_SAKURA_SIGNATURE"] != $x_sakura_signature){
+  die("Invalid signature");
+}
+
 if($message["type"] == "channels"){
 
   $pdo_string = sprintf('mysql:dbname=%s;host=%s;charset=utf8', DB_NAME, DB_HOST);
@@ -29,6 +35,7 @@ if($message["type"] == "channels"){
     }catch (PDOException $e) {
       die($e->getMessage());
     }
+
   }
 }
 

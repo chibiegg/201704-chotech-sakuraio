@@ -4,3 +4,4 @@ define('DB_NAME', 'dbname');
 define('DB_USER', 'dbuser');
 define('DB_PASSWORD', 'password');
 define('DB_HOST', 'mysqlxxx.db.sakura.ne.jp');
+define('SECRET', 'CHANGE ME');
