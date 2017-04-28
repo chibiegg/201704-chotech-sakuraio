@@ -34,7 +34,7 @@ $stmt = $dbh->query($sql);
       <th><?php echo($result["module"]); ?></th>
       <th><?php echo($result["channel"]); ?></th>
       <td><?php echo($result["value"]); ?></td>
-      <td><?php echo($result["datetime"]); ?></td>
+      <td><?php echo($result["datetime"]); ?>+0000</td>
     </tr>
 <?php } ?>
   </tbody>
