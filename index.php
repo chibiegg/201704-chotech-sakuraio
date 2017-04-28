@@ -39,3 +39,11 @@ $stmt = $dbh->query($sql);
 <?php } ?>
   </tbody>
 </table>
+<script>
+setTimeout(
+  function(){
+    location.reload();
+  }
+,5000);
+</script>
+</html>
